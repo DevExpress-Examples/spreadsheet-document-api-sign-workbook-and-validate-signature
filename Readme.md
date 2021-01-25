@@ -1,4 +1,4 @@
-# How to Sign a Workbook and Validate a Signature
+# How to Sign a Workbook and Validate the Signature
 
 This code sample project shows how to use the [DocumentSigner](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Office.DigitalSignatures.DocumentSigner?p=netframework) class to sign an Excel document and validate the signature.
 
