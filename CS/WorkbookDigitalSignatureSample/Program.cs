@@ -9,8 +9,8 @@ namespace WorkbookDigitalSignatureSample
 {
     class Program
     {
-        static string input = "Template.xlsx";
-        static string output = "Template_signed.xlsx";
+        static string input = "..\\..\\..\\Template.xlsx";
+        static string output = "..\\..\\..\\Template_signed.xlsx";
 
         static void Main(string[] args)
         {            
@@ -33,7 +33,7 @@ namespace WorkbookDigitalSignatureSample
         //Specify signature options:
         static SignatureOptions CreateSignatureOptions()
         {
-            X509Certificate2 certificate = new X509Certificate2("Certificate/SignDemo.pfx", "dxdemo");
+            X509Certificate2 certificate = new X509Certificate2("..\\..\\..\\Certificate\\SignDemo.pfx", "dxdemo");
             Uri tsaServer = new Uri("https://freetsa.org/tsr");
             SignatureOptions options = new SignatureOptions();
             options.Certificate = certificate;
@@ -89,7 +89,7 @@ namespace WorkbookDigitalSignatureSample
             {
                 case PackageSignatureValidationResult.Valid:
                     Console.WriteLine(validationMessage); Console.ReadKey();
-                    Process.Start(path);
+                    Process.Start( new ProcessStartInfo(path) { UseShellExecute = true});
                     break;
 
                 case PackageSignatureValidationResult.SignaturesNotFound:

@@ -7,8 +7,8 @@ Imports System.Security.Cryptography.X509Certificates
 
 Namespace WorkbookDigitalSignatureSample
 	Friend Class Program
-		Private Shared input As String = "Template.xlsx"
-		Private Shared output As String = "Template_signed.xlsx"
+		Private Shared input As String = "..\..\..\Template.xlsx"
+		Private Shared output As String = "..\..\..\Template_signed.xlsx"
 
 		Shared Sub Main(ByVal args() As String)
 			'Enable all security protocols:
@@ -28,7 +28,7 @@ Namespace WorkbookDigitalSignatureSample
 
 		'Specify signature options:
 		Private Shared Function CreateSignatureOptions() As SignatureOptions
-			Dim certificate As New X509Certificate2("Certificate/SignDemo.pfx", "dxdemo")
+			Dim certificate As New X509Certificate2("..\..\..\Certificate\SignDemo.pfx", "dxdemo")
 			Dim tsaServer As New Uri("https://freetsa.org/tsr")
 			Dim options As New SignatureOptions()
 			options.Certificate = certificate
@@ -82,7 +82,7 @@ Namespace WorkbookDigitalSignatureSample
 				Case PackageSignatureValidationResult.Valid
 					Console.WriteLine(validationMessage)
 					Console.ReadKey()
-					Process.Start(path)
+					Process.Start(New ProcessStartInfo(path) With {.UseShellExecute = True})
 
 				Case PackageSignatureValidationResult.SignaturesNotFound
 					Console.WriteLine(validationMessage)
