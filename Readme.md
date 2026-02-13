@@ -18,7 +18,7 @@ The Universal Subscription or an additional Office File API Subscription is requ
 
 * [Sign Word and Excel Files](https://docs.devexpress.com/OfficeFileAPI/402567/sign-office-documents)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=spreadsheet-document-api-sign-workbook-and-validate-signature&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=spreadsheet-document-api-sign-workbook-and-validate-signature&~~~was_helpful=no)
 
